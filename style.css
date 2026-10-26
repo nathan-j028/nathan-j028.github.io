@@ -1,0 +1,33 @@
+body{
+    margin:0;
+}
+
+.roboto-mono{
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight:bold;
+  font-style: normal;
+}
+
+#nav-bar{
+    background-color: #345995;
+    text-align:center;
+    width:100vw;
+    height:30vh;
+}
+/* #buttons{
+    min-width:1rem;
+    max-width:rem;
+    height:2rem;
+}*/
+button{
+    min-width:10%;
+    height:20%;
+    background-color:#345995;
+    color:#FFFFFF;
+    border-width:0;
+    border-style:solid;
+}
+button:hover{
+    background-color:lightsteelblue;
+}
