@@ -1,33 +1,95 @@
-body{
-    margin:0;
+@keyframes button-hover{
+    100%{
+        border-color:antiquewhite;
+    }
 }
-
-.roboto-mono{
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight:bold;
+/*Font Types*/
+.bruno-ace-sc-regular{
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.blinker-semibold {
+  font-family: "Blinker", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.blinker-bold {
+  font-family: "Blinker", sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
 
-#nav-bar{
-    background-color: #345995;
-    text-align:center;
-    width:100vw;
-    height:30vh;
+html, body{
+    margin:0;
+    padding:0;
+    /*Set root html font to Blinker (regular weight)*/
+    font-family: "Blinker", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-/* #buttons{
-    min-width:1rem;
-    max-width:rem;
-    height:2rem;
-}*/
+
+body{
+    background-image: url(images-for-business-website/hero-banner.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+#nav-bar{
+    background-color:transparent;
+    width:100vw;
+    height:5vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    color:white;
+}
+
+#hero-banner{
+    width:100vw;
+    height:50vh;
+    margin-top:2rem;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    /*Aligns all content at the center of the div box*/
+    justify-content:center;
+    align-content:center;
+    color:white;
+    line-height:2.5rem;
+}
+#company-name{
+    font-size:4rem;
+}
+#slogan{
+    font-size:2rem;
+}
+#company-description{
+    font-size:1.25rem;
+}
 button{
-    min-width:10%;
-    height:20%;
-    background-color:#345995;
-    color:#FFFFFF;
-    border-width:0;
+    min-width:5%;
+    max-width:15%;
+    height:75%;
+    font-family: "Blinker", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color:transparent;
+    border-width:2px;
+    border-radius:5px;
     border-style:solid;
+    border-color:transparent;
+    color:white;
+    
 }
 button:hover{
-    background-color:lightsteelblue;
+    /*When hovering over a button, a border will appear.*/
+    animation-name:button-hover;
+    animation-duration:0.25s;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+}
+button:active{
+    /*Scale the button smaller so it is easy to tell if the button has been clicked*/
+    transform:scale(0.95);
 }
