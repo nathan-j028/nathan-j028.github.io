@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Bruno+Ace+SC&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="nav-bar">
+    <div class="nav-bar">
         <h1 class="bruno-ace-sc-regular" id="logo">OptiCore</h1>
-        <button id="navbar-button">Home</button>
-        <a href="#about-us-content" id="navbar-button">About Us</a>
+        <button class="navbar-button">Home</button>
+        <a href="#about-us-content" class="navbar-button">About Us</a>
         <!-- <button id="navbar-button">About Us</button> -->
-        <button id="navbar-button">Products</button>
-        <button id="navbar-button">Warranty Policy</button>
-        <button id="navbar-button">Q&A</button>
+        <button class="navbar-button">Products</button>
+        <button class="navbar-button">Warranty Policy</button>
+        <button class="navbar-button">Q&A</button>
     </div>
     <div id="hero-banner">
         <h1 class="bruno-ace-sc-regular" id="company-name">OptiCore Engineering</h1>
@@ -25,12 +25,14 @@
         <p id="company-description">High-quality computer components, thoroughly tested and reasonably priced.</p> 
         <button id="shop-now">Shop Now</button>
     </div>
-    
-    <div id="about-us-content">
-        <h1 class="about-us-title">About Us</h1>
+
+    <!-- About Us Section of Home Page -->
+    <div class="home-page-containers" id="about-us-content">
+        <h1 class="title-section">About Us</h1>
         <p id="about-us-text">We are a growing technology e-commerce computer hardware company that makes and sells high-quality computer parts at competitive prices. 
             We are always striving to provide you with high-quality computer parts at a lower price whether you need them for upgrading or building your computer.</p>
         <br>
+        <!-- Situation -->
         <div id="situation-section">
             <p id="about-us-text">
                 <span class="heading-text">Situation</span>
@@ -38,19 +40,18 @@
                 We noticed a major problem with computer parts being difficult to obtain due to higher prices and shortages starting in October 2025, 
                 then we realized that it started getting worse heading into 2026 because of AI companies. 
                 This causes well-known companies to discontinue their consumer brand and redirect their manufacturing toward high-capacity parts designed for the demands of AI data centers.</p>
-            <img src="images-for-business-website/ai-image.jpg" width="35%">
+            <img src="images-for-business-website/ai-image-cropped.jpg" width="35%">
         </div>
-            
+        <!-- Mission -->
         <div id="mission-section">
             <p id="about-us-text">
                 <span class="heading-text">Our Mission</span>
                 <br><br>
                 We manufacture and sell computer parts ranging from CPUs and GPUs to motherboards and even our own laptops at a reasonable price.
                We want to make much needed computer parts available for everybody during the AI boom and their heavy demands.</p>
-            <img src="images-for-business-website/computer-hardware.jpg" width="20%"">
-            
+            <img src="images-for-business-website/computer-hardware-cropped.jpg" width="20%"">
         </div>
-
+        <!-- Result -->
         <div id="result-section">
         <p id="about-us-text">
             <span class="heading-text">Result</span>
@@ -58,8 +59,48 @@
             Premium-Engineered computer parts at a more affordable cost so you don't have to worry about breaking the bank and buying them at a high price due to AI demands.</p>
             <img src="images-for-business-website/computer-components.jpg" width="25%">
         </div>
-        <div div=""
     </div>
 
+    <!-- Products section in Home Page -->
+    <div class="home-page-containers" id="products">
+        <h1 class="title-section">Products</h1>
+        <div id="product-container">
+            <div class="cpu">
+                <img src="images-for-business-website/cpu-cropped.jpg" width="15%">
+                <p>Base:Insert price here</p>
+                <p>Pro:Insert price here</p>
+            </div>
+            <div class="gpu">
+            </div>
+            <div class="ram">
+            </div>
+            <div class="ssd">
+            </div>
+            <div class="motherboard">
+            </div>
+            <div class="liquid-cooler">
+            </div>
+            <div class="fan-cooler">
+            </div>
+            <div class="psu">
+            </div>
+            <div class="ups">
+            </div>
+            <div class="laptops">
+            </div>
+        </div>
+    </div>
+
+    <!-- Warranty Policy Section -->
+     <div class="home-page-containers" id="warranty-policy">
+        <h1 class="title-section">Warranty Policy</h1>
+        <p>All products get a <span class="bold-text">free 60-day warranty</span>. Visit our <a href="">Warranty Policy</a> for more warranty options and information.</p>
+     </div>
+
+     <!-- Q&A Section -->
+      <div class="home-page-containers" id="q&a-section">
+        <h1 class="title-section">Q & A</h1>
+        <p>If you have any questions about our business, click <a href="">here</a> to go to the Q&A page.</p>
+     </div>
 </body>
 </html>
