@@ -39,8 +39,10 @@ body{
 
 #nav-bar{
     background-color:#011A50;
-    width:100%;
+    /* For the website to not have the horizontal scroll, width is 99.25% for now. */
+    width:99.25%;
     height:5vh;
+    padding:0;
     display:flex;
     justify-content:space-around;
     align-items:center;
@@ -48,12 +50,11 @@ body{
     border-width:5px;
     border-style:solid;
     border-color:transparent;
-    border-radius:10px;
 }
 #navbar-button{
-    min-width:5%;
-    max-width:20%;
+    width:8%;
     height:75%;
+    padding:0;
     font-family: "Blinker", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -69,6 +70,7 @@ body{
     justify-content:center;
     align-items:center;
 }
+
 #navbar-button:hover{
     /*When hovering over a button, a border will appear.*/
     animation-name:button-hover;
@@ -137,40 +139,44 @@ body{
 }
 
 #about-us-content{
-    margin-left:auto;
-    margin-right:auto;
-    padding:10px 25px;
+    padding:10px 0;
     background-color:white;
-    width:95vw;
+    width:100%;
     height:25%;
     position:relative;
     top:25px;
     display:flex;
     flex-direction:column;
-    justify-content:center;
-
+    align-items:center;
 }
 /*Title of the section*/
 .about-us-title{
-    text-align:left;
+    text-align:center;
     color:#0000D1;
     text-decoration:underline;
 }
-/*All paragraph text in about us div box*/
+/*All paragraph text in "About Us" div box*/
 #about-us-text{
     line-height:1.75rem;
-    max-width:50%;
+    max-width:45%;
 }
 
 #situation-section{
-    width:80%;
+    width:75%;
+    height:20rem;
     display:flex;
     flex-direction:row;
-    gap:25%;
+    gap:5rem;
+    margin-bottom:2.5rem;
+    padding: 0rem 0.75rem;
 }
-
 #mission-section{
-
+width:75%;
+display:flex;
+flex-direction:row-reverse;
+gap:5rem;
+margin-bottom:1.5rem;
+padding: 0 0.75rem;
 }
 #result-section{
 
