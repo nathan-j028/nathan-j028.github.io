@@ -3,6 +3,38 @@
         border-color:antiquewhite;
     }
 }
+@keyframes shop-now-hover{
+    100%{
+        transform:scale(1.1);
+}
+}
+/* This animation makes the title go down as it fades in. */
+@keyframes title-fade-in{
+    0%{
+        /* This will make the text go up while being invisible at the start of the animation. */
+        transform:translateY(-1rem);
+        opacity:0;
+    }
+    100%{
+        /* This will make the text go back to its original position and start to appear at the end of the animation. */
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes products-fade-in{
+    0%{
+        /* This will make the products go down while 0% opacity at the start of the animation */
+        transform:translateY(-2rem);
+        opacity:0;
+    }
+
+    100%{
+        /* This will make the products return to its original position and fade in until at the end of the animation. */
+        transform:translateY(0);
+        opacity:1;
+    }
+}
 
 /*Font Types*/
 .bruno-ace-sc-regular{
@@ -28,7 +60,7 @@ html, body{
     font-family: "Blinker", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size:16px;
+    font-size:18px;
 }
 
 body{
@@ -38,9 +70,10 @@ body{
 }
 
 .bold-text{
-    font-weight:bold;
+    font-weight:700;
 }
 
+/* Navigation Bar */
 .nav-bar{
     background-color:#011A50;
     /* For the website to not have the horizontal scroll, width is 99.25% for now. */
@@ -87,6 +120,7 @@ body{
     transform:scale(0.95);
 }
 
+/* Hero Banner */
 #hero-banner{
     width:100%;
     height:45vh;
@@ -100,6 +134,10 @@ body{
     text-align:center;
     color:white;
     line-height:2.5rem;
+    animation-name:title-fade-in;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-out;
 }
 #company-name{
     font-size:3.5rem;
@@ -110,7 +148,7 @@ body{
 #company-description{
     font-size:1rem;
 }
-#shop-now{
+.shop-now-button{
     width:10vw;
     height:5vh;
     font-family: "Blinker", sans-serif;
@@ -118,23 +156,25 @@ body{
     font-style: normal;
     font-size:1rem;
     color:white;
+    text-decoration:none;
     margin-top:auto;
     background-color:#2650A3;
     border-width:1px;
     border-style:solid;
+    border-color:transparent;
     border-radius:10px;
 }
-#shop-now:hover{
-    /*When hovering, the button should have a different color that fades in while scaling it 10% bigger*/
+
+.shop-now-button:hover{
+    /*When hovering, the button should have a different color that fades in*/
     background-color:#3765BF;
-    transform:scale(1.1);
     animation-name:shop-now-hover;
-    animation-duration:0.25;
+    animation-duration:0.2s;
     animation-fill-mode:forwards;
     animation-timing-function:linear;
 }
-#shop-now:active{
-    transform:scale(1);
+.shop-now-button:active{
+    transform:scale(0.95);
 }
 
 .heading-text{
@@ -143,20 +183,23 @@ body{
 }
 
 .home-page-containers{
-    width:100%;
+    width:auto;
     height:25%;
     background-color:white;
     padding-top:1rem;
     padding-bottom:2.5rem;
     margin-top:1.5rem;
+    margin-bottom:1.5rem;
     text-align:center;
 }
 
-#about-us-content{
+/* About Us */
+
+/* Puts all elements in the about us section at the center */
+#about-us{
     display:flex;
     flex-direction:column;
     align-items:center;
-    position:relative;
 }
 /*Title of the section*/
 .title-section{
@@ -165,8 +208,9 @@ body{
 }
 /*All paragraph text in "About Us" div box*/
 #about-us-text{
-    line-height:1.75rem;
+    line-height:2rem;
     max-width:45%;
+    font-size:1.15rem;
 }
 
 #situation-section{
@@ -194,11 +238,66 @@ body{
     padding:0 0.75rem;
 }
 
-#products{
+/* Products */
 
+.product-container{
+    width:fit-content;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2rem;
+    font-size:1.25rem;
+}
+.product-row-one, .product-row-two{
+    width:auto;
+    display:flex;
+    justify-content:center;
+    align-items:baseline;
+    align-content:center;
+    gap:2.5rem;
+}
+.product-row-one{
+    animation-name:products-fade-in;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-out;
+}
+.product-row-two{
+    animation-name:products-fade-in;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-out;
+    
+}
+#product{
+    width:max-content;
 }
 
+/* Changes the distance from the product images */
+#product-title{
+    line-height:0px;
+    margin-bottom:1rem;
+}
 
-#warranty-policy{
-    
+.product-link{
+    color:#3765BF;
+    text-decoration:none;
+}
+.product-link:hover{
+    text-decoration:underline;
+}
+
+.bigger-font-size{
+    font-size:1.25rem;
+}
+
+.link{
+    color:black;
+    text-decoration:underline;
+}
+.link:hover{
+    color:blue;
+}
+
+#warranty-section, #qna-section{
+    padding:2.5rem;
 }

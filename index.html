@@ -12,23 +12,23 @@
 <body>
     <div class="nav-bar">
         <h1 class="bruno-ace-sc-regular" id="logo">OptiCore</h1>
-        <button class="navbar-button">Home</button>
-        <a href="#about-us-content" class="navbar-button">About Us</a>
-        <!-- <button id="navbar-button">About Us</button> -->
-        <button class="navbar-button">Products</button>
-        <button class="navbar-button">Warranty Policy</button>
-        <button class="navbar-button">Q&A</button>
+        <a href="index.html" class="navbar-button">Home</a>
+        <a href="#about-us" class="navbar-button">About Us</a>
+        <a href="#products" class="navbar-button">Products</a>
+        <a href="" class="navbar-button">Warranty Policy</a>
+        <a href="" class="navbar-button">Q & A</a>
     </div>
     <div id="hero-banner">
         <h1 class="bruno-ace-sc-regular" id="company-name">OptiCore Engineering</h1>
         <h2 class="bruno-ace-sc-regular" id="slogan">Optimized for Performance. At Affordable Prices.</h2>
         <p id="company-description">High-quality computer components, thoroughly tested and reasonably priced.</p> 
-        <button id="shop-now">Shop Now</button>
+        <a href="" class="shop-now-button">Shop Now</a>
+        <!-- <button class="shop-now-button">Shop Now</button> -->
     </div>
 
     <!-- About Us Section of Home Page -->
-    <div class="home-page-containers" id="about-us-content">
-        <h1 class="title-section">About Us</h1>
+    <div class="home-page-containers" id="about-us">
+        <h1 class="title-section">Our Business</h1>
         <p id="about-us-text">We are a growing technology e-commerce computer hardware company that makes and sells high-quality computer parts at competitive prices. 
             We are always striving to provide you with high-quality computer parts at a lower price whether you need them for upgrading or building your computer.</p>
         <br>
@@ -47,8 +47,8 @@
             <p id="about-us-text">
                 <span class="heading-text">Our Mission</span>
                 <br><br>
-                We manufacture and sell computer parts ranging from CPUs and GPUs to motherboards and even our own laptops at a reasonable price.
-               We want to make much needed computer parts available for everybody during the AI boom and their heavy demands.</p>
+                We manufacture and sell computer parts ranging from CPUs and GPUs to motherboards and even our own laptops at a reasonable price. 
+                Our products are always lab-tested and certified to make sure our quality standards have been met to give our customers trusted and reliable computer parts available for everybody during the AI boom and their heavy demands.</p>
             <img src="images-for-business-website/computer-hardware-cropped.jpg" width="20%"">
         </div>
         <!-- Result -->
@@ -64,43 +64,79 @@
     <!-- Products section in Home Page -->
     <div class="home-page-containers" id="products">
         <h1 class="title-section">Products</h1>
-        <div id="product-container">
-            <div class="cpu">
-                <img src="images-for-business-website/cpu-cropped.jpg" width="15%">
-                <p>Base:Insert price here</p>
-                <p>Pro:Insert price here</p>
+        <div class="product-container">
+            <!-- Classes will be used for animations (sequential fade ins) -->
+             <!-- Creating two divs so that there are only five products in each row -->
+             <div class="product-row-one">
+                <div class="cpu">
+                    <a href=""><img src="images-for-business-website/cpu-cropped.jpg" width="275rem"></a>
+                    <a class="product-link" href="" ><h3 id="product-title">Desktop CPU</h3></a>
+                    <p><span class="bold-text">Base</span>: $249.99<br><span class="bold-text">Pro</span>: $499.99</p>
+                </div>
+                <div class="gpu">
+                    <a href=""><img src="images-for-business-website/gpu-cropped.jpg" width="275rem"></a>
+                    <a class="product-link" href=""><h3 id="product-title">Desktop GPU</h3></a>
+                    <p><span class="bold-text">Base</span>: $299.99<br><span class="bold-text">Pro</span>: $799.99</p>
+                </div>
+                <div class="ram">
+                    <a href=""><img src="images-for-business-website/ram-cropped.jpg" width="275rem"></a>
+                    <a class="product-link" href=""><h3 id="product-title">RAM</h3></a>
+                    <p><span class="bold-text">Price</span>:<br>Up to $189.99 (64 GB)</p>
+                </div>
+                <div class="ssd">
+                    <a href=""><img src="images-for-business-website/ssd-cropped.jpg" width="275rem"></a>
+                    <a class="product-link" href=""><h3 id="product-title">SSD</h3></a>
+                    <p><span class="bold-text">Price</span>:<br>Up to $374.99 (4 TB)</p>
+                </div>
+                <div class="motherboard">
+                    <a href=""><img src="images-for-business-website/motherboard-cropped.jpg" width="275rem"></a>
+                    <a class="product-link" href=""><h3 id="product-title">Motherboard</h3></a>
+                    <p><span class="bold-text">Price</span>:<br>$229.99</p>
+                </div>
             </div>
-            <div class="gpu">
-            </div>
-            <div class="ram">
-            </div>
-            <div class="ssd">
-            </div>
-            <div class="motherboard">
-            </div>
-            <div class="liquid-cooler">
-            </div>
-            <div class="fan-cooler">
-            </div>
-            <div class="psu">
-            </div>
-            <div class="ups">
-            </div>
-            <div class="laptops">
+            
+            <div class="product-row-two">
+                <div class="liquid-cooler">
+                    <a href=""><img src="images-for-business-website/liquid-cooler.jpg" width="275rem"></a>
+                    <a class="product-link" href=""><h3 id="product-title">Liquid Cooler</h3></a>
+                    <p><span class="bold-text">Price</span>:<br>$269.99</p>
+                </div>
+                <div class="air-cooler">
+                    <a href=""><img src="images-for-business-website/air-cooler-cropped.png" width="275rem"></a>
+                    <a class="product-link" href=""><h3 id="product-title">Air Cooler</h3></a>
+                    <p><span class="bold-text">Price</span>:<br>$39.99</p>
+                </div>
+                <div class="psu">
+                    <a href=""><img src="images-for-business-website/power-supply-unit.jpg" width="275rem"></a>
+                    <a class="product-link" href=""><h3 id="product-title">Power Supply Unit</h3></a>
+                    <p><span class="bold-text">Price</span>:<br>Up to $79.99</p>
+                </div>
+                <div class="ups">
+                    <a href=""><img src="images-for-business-website/ups-cropped.png" width="275rem"></a>
+                    <a class="product-link" href=""><h3 id="product-title">Uninterruptible Power Supply</h3></a>
+                    <p><span class="bold-text">Price</span>:<br>$124.99</p>
+                </div>
+                <div class="laptops">
+                    <a href=""><img src="images-for-business-website/base-laptop-cropped.jpg" width="275rem"></a>
+                    <a class="product-link" href=""><h3 id="product-title">Laptops</h3></a>
+                    <p><span class="bold-text">Price</span>:<br>Up to $4,200</p>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Warranty Policy Section -->
-     <div class="home-page-containers" id="warranty-policy">
+     <div class="home-page-containers" id="warranty-section">
         <h1 class="title-section">Warranty Policy</h1>
-        <p>All products get a <span class="bold-text">free 60-day warranty</span>. Visit our <a href="">Warranty Policy</a> for more warranty options and information.</p>
+        <p class="bigger-font-size">All products have a <span class="bold-text">free 60-day warranty</span> included with your purchase. We also provide
+           two paid warranty for longer protection.<br>To learn more, visit our <a class="link" href="">Warranty Policy</a> page.</p>
      </div>
 
      <!-- Q&A Section -->
-      <div class="home-page-containers" id="q&a-section">
+      <div class="home-page-containers" id="qna-section">
         <h1 class="title-section">Q & A</h1>
-        <p>If you have any questions about our business, click <a href="">here</a> to go to the Q&A page.</p>
+        <p class="bigger-font-size">If you have any questions about our business, click <a class="link" href="">here</a> to go to the Q&A page.</p>
      </div>
+     <div
 </body>
 </html>
