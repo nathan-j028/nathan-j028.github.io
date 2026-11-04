@@ -8,7 +8,7 @@
         transform:scale(1.1);
 }
 }
-/* This animation makes the title go down as it fades in. */
+/* This animation makes the title on the hero banner go down as it fades in. */
 @keyframes title-fade-in{
     0%{
         /* This will make the text go up while being invisible at the start of the animation. */
@@ -22,6 +22,7 @@
     }
 }
 
+/* This is an animation for the products section on the home page */
 @keyframes products-fade-in{
     0%{
         /* This will make the products go down while 0% opacity at the start of the animation */
@@ -44,6 +45,30 @@
         transform:translateY(0);
     }
 }
+
+/* This animation makes the product image to start higher at the start of the animation then fades in and go back to its original position. */
+@keyframes product-image{
+    0%{
+        transform:translateY(-2.5rem);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+/* This animation makes the product information to appear from the right of the page */
+@keyframes product-info{
+    0%{
+        opacity:0;
+        transform:translateX(2rem);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
 /*Font Types*/
 .bruno-ace-sc-regular{
   font-family: "Bruno Ace SC", sans-serif;
@@ -85,6 +110,7 @@ button{
     font-weight: 400;
     font-style: normal;
 }
+
 /* Navigation Bar */
 .nav-bar{
     background-color:#011A50;
@@ -199,9 +225,10 @@ button{
     width:auto;
     height:25%;
     background-color:white;
-    padding-top:1rem;
-    padding-bottom:2rem;
-    margin:1.25rem 0;
+    padding: 1.5rem 0;
+    /* padding-top:1.5rem;
+    padding-bottom:2rem; */
+    margin:0.8rem 0;
     text-align:center;
 }
 
@@ -315,7 +342,7 @@ button{
 }
 
 .bigger-font-size{
-    font-size:1.25rem;
+    font-size:1.2rem;
 }
 
 .link{
@@ -332,20 +359,22 @@ button{
 }
 
 /* For Product Pages */
+
 .product-page-title{
     color:#0000D1;
 }
 .webpage-containers{
     background-color:white;
-    padding-top:1rem;
-    padding-bottom:2rem;
-    margin:1.25rem 0;
+    padding:1.5rem 0;
+    margin:0.8rem 0;
 
 }
 .price-font-size{
-    font-size:1.75rem;
+    font-size:1.5rem;
 }
-
+.price{
+    text-decoration:underline;
+}
 /* Plan to make the button border color to be blue after a button is pressed so the user knows what configurations are selected. */
 .model-button{
     width:5.75rem;
@@ -385,11 +414,11 @@ button{
     border-style:solid;
     background-color:white;
     font-size:1.05rem;
+    /* Creates spacing between the buttons */
     margin:0.25rem 0;
 }
 
 .product-page-content{
-    min-width:auto;
     width:100%;
     height:25%;
     display:flex;
@@ -401,10 +430,12 @@ button{
     margin-top:2rem;
     width:30rem;
     height:30rem;
-    background-image:url(images-for-business-website/cpu-cropped.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
+    animation-name:product-image;
+    animation-duration:0.75s;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-out;
 }
+
 #product-info{
     margin-top:2rem;
     padding:0;
@@ -412,4 +443,99 @@ button{
     position:relative;
     left:4%;
     font-size:1.1rem;
+    line-height:1.5rem;
+    animation-name:product-info;
+    animation-duration:0.75s;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-out;
+}
+.add-to-cart{
+    width: 10rem;
+    height: 2.75rem;
+    background-color:#3967D4;
+    border-width:2px;
+    border-style:solid;
+    border-color:black;
+    border-radius:1rem;
+    font-size:1.25rem;
+    color:white;
+}
+.add-to-cart:hover{
+    background-color:#577FE6;
+}
+.add-to-cart:active{
+    background-color:#3967D4;
+}
+.footer{
+    background-color:#011A50;
+    width:100%;
+    height:15rem;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:5rem;
+    align-items:center;
+    align-content:center;
+    color:white;
+}
+.logo{
+    width:25%;
+    height:5rem;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:0.5rem;
+    font-size:1rem;
+}
+.logo-image{
+    width:2.25rem;
+    height:2.25rem;
+    background-color:white;
+    clip-path: circle(50% at 50% 50%);
+    /* Centers the logo in the circle */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-decoration:none;
+    color:white;
+    font-size:0.85rem;
+}
+.footer-links:hover{
+    text-decoration:underline;
+}
+.footer-links:active{
+    color:blue;
+}
+/* These CSS properties separates the essential links which are home, about us, warranty policy, and FAQ from the product links.*/
+.essential-links .product-links{
+    width:50%;
+    height:100%;
+    line-height:4rem;
+}
+.essential-links{
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+}
+
+/* This makes 5 links be in 2 columns each side by side. */
+.product-links{
+    display:flex;
+    flex-direction:row;
+}
+/* This makes the links go in a column orientation. */
+.product-links-one, .product-links-two{
+    width:8rem;
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+}
+.product-link-container{
+    width:20%;
 }
