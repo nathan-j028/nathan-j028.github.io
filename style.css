@@ -443,7 +443,7 @@ button{
     position:relative;
     left:4%;
     font-size:1.1rem;
-    line-height:1.5rem;
+    line-height:1.75rem;
     animation-name:product-info;
     animation-duration:0.75s;
     animation-fill-mode:forwards;
