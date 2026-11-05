@@ -121,6 +121,7 @@ button{
     display:flex;
     justify-content:space-around;
     align-items:center;
+    align-content:center;
     color:white;
     border-width:5px;
     border-style:solid;
@@ -229,9 +230,7 @@ button{
     width:auto;
     height:25%;
     background-color:white;
-    padding: 1.5rem 0;
-    /* padding-top:1.5rem;
-    padding-bottom:2rem; */
+    padding: 1.25rem 0;
     margin:0.8rem 0;
     text-align:center;
 }
@@ -361,9 +360,13 @@ button{
     color:blue;
 }
 
-#warranty-section, #qna-section{
+#warranty-section, #FAQ-section{
     text-align:center;
     padding:2rem;
+}
+/* Gets rid of the spacing between the FAQ section and the footer. */
+#FAQ-section{
+    margin-bottom:0;
 }
 
 /* For Product Pages */
@@ -373,9 +376,8 @@ button{
 }
 .webpage-containers{
     background-color:white;
-    padding:1.5rem 0;
-    margin:0.8rem 0;
-
+    padding:1.25rem 0;
+    margin-bottom:0.8rem;
 }
 .price-font-size{
     font-size:1.5rem;
@@ -393,6 +395,10 @@ button{
     border-style:solid;
     font-size:1.25rem;
     background-color:white;
+}
+.model-button:hover{
+    border-width:2.75px;
+    border-color:gray;
 }
 
 /* Used for most configuration buttons except for warranty buttons */
@@ -424,6 +430,10 @@ button{
     font-size:1.05rem;
     /* Creates spacing between the buttons */
     margin:0.25rem 0;
+}
+.warranty-button:hover{
+    border-color:gray;
+    border-width:2.75px;
 }
 
 .product-page-content{
@@ -545,4 +555,15 @@ button{
 }
 .product-link-container{
     width:20%;
+}
+#specifications{
+    padding:0.5rem 1rem;
+}
+.specs-container{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+#specs-spacing{
+    margin-left:2.5rem;
 }
