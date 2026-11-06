@@ -115,7 +115,7 @@ button{
 .nav-bar{
     background-color:#011A50;
     width:100%;
-    height:5vh;
+    height:6.5vh;
     padding:0;
     margin:0;
     display:flex;
@@ -432,6 +432,10 @@ button{
     border-width:2.75px;
 }
 
+#included-warranty{
+    border-color:blue;
+}
+
 .product-page-content{
     width:100%;
     display:flex;
@@ -563,4 +567,3 @@ button{
 .specs-line-height{
     line-height:1.5rem;
 }
-
