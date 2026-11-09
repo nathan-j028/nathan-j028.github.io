@@ -564,6 +564,7 @@ button{
     justify-content:flex-start;
     gap:4rem;
 }
-.specs-line-height{
+.specs-child{
+    width:35%;
     line-height:1.5rem;
 }
