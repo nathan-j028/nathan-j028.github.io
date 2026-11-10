@@ -132,7 +132,7 @@ button{
 }
 .navbar-button{
     width:8%;
-    height:75%;
+    height:70%;
     padding:0;
     background-color:transparent;
     border-width:2px;
@@ -378,7 +378,7 @@ button{
 .price-font-size{
     font-size:1.5rem;
 }
-.price{
+#price{
     text-decoration:underline;
 }
 /* Plan to make the button border color to be blue after a button is pressed so the user knows what configurations are selected. */
@@ -432,7 +432,8 @@ button{
     border-width:2.75px;
 }
 
-#included-warranty{
+/* Sets a blue border on the specifc button that has been selected. */
+.blue-border{
     border-color:blue;
 }
 
