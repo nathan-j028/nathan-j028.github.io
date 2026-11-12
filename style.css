@@ -587,7 +587,7 @@ button{
     text-align:center;
 }
 
-.warranty-policy-content{
+.warranty-policy-content, .FAQ-content{
     min-width:400px;
     width:45vw;
     height:100%;
