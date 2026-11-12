@@ -371,9 +371,11 @@ button{
     color:#0000D1;
 }
 .webpage-containers{
+    width:100vw;
     background-color:white;
     padding:1.25rem 0;
     margin-bottom:0.8rem;
+    border-width:0;
 }
 .price-font-size{
     font-size:1.5rem;
@@ -382,7 +384,7 @@ button{
     text-decoration:underline;
 }
 /* Plan to make the button border color to be blue after a button is pressed so the user knows what configurations are selected. */
-.model-button{
+.model-button, .ram-config-button, .ssd-config-button, .laptop-size-button{
     width:5.75rem;
     height:2.75rem;
     border-width:2px;
@@ -392,7 +394,7 @@ button{
     font-size:1.25rem;
     background-color:white;
 }
-.model-button:hover{
+.model-button:hover,.ram-config-button:hover, .ssd-config-button:hover, .laptop-size-button:hover{
     border-width:2.75px;
     border-color:gray;
 }
@@ -437,6 +439,7 @@ button{
     border-color:blue;
 }
 
+/* Arranges the product image and the product info  */
 .product-page-content{
     width:100%;
     display:flex;
@@ -486,6 +489,7 @@ button{
 .footer{
     background-color:#011A50;
     width:100%;
+    max-width:100vw;
     height:15rem;
     display:flex;
     flex-direction:row;
@@ -563,9 +567,32 @@ button{
     display:flex;
     flex-direction:row;
     justify-content:flex-start;
-    gap:4rem;
+    gap:2.75rem;
 }
 .specs-child{
     width:35%;
     line-height:1.5rem;
+}
+
+.compare-models-container{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+}
+.compare-models-text{
+    text-decoration:underline;
+}
+
+.center-text-align{
+    text-align:center;
+}
+
+.warranty-policy-content{
+    min-width:400px;
+    width:45vw;
+    height:100%;
+    margin-left:auto;
+    margin-right:auto;
+    line-height:1.5rem;
+    
 }

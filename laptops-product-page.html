@@ -19,39 +19,47 @@
         <a href="FAQ-page.html" class="navbar-button">FAQ</a>
     </div>
     <div class="product-page-content webpage-containers">
-        <div id="product-image"><img src="images-for-business-website/base-laptop-cropped.jpg" width="75%"></div>
+        <div id="product-image"><img id="laptop-image" src="images-for-business-website/base-laptop-cropped.jpg" width="75%"></div>
         <div id="product-info">
-            <h1 class="product-page-title">OptiBook</h1>
+            <!-- Names for Laptop Models: Base - OptiBook [14/16]; Pro - OptiBook Pro [14/16] -->
+            <h1 class="product-page-title" id="laptop-name">OptiBook</h1>
             <p>Do you hate short battery life on your laptop? 
                 Do you want your laptop to run full power on battery without sacrificing performance?
                 Well look no further, this new laptop is engineered to do all that at a competitive price.</p>
+            <p>All laptop models have a 16:10 aspect ratio, providing more vertical space for reading long documents, seeing more lines of code, and viewing spreadsheets.</p>
+            <p></p>
             <p class="bold-text">Model:</p>
                 <div class="button-div" id="model">
                 <button class="model-button blue-border">Base</button>
                 <button class="model-button">Pro</button>
             </div>
+            <p class="bold-text">Size:</p>
+            <div class="button-div" id="size-config">
+                <button class="laptop-size-button blue-border"> 14-inch</button>
+                <button class="laptop-size-button"> 16-inch</button>
+            </div>
             <p class="bold-text">Choose your RAM:</p>
             <div class="button-div" id="ram-config">
-                <button class="model-button blue-border">16 GB</button>
-                <button class="model-button">32 GB</button>
-                <button class="model-button">64 GB</button>
+                <button class="ram-config-button blue-border">16 GB</button>
+                <button class="ram-config-button">32 GB</button>
+                <button class="ram-config-button">64 GB</button>
             </div>
             <p class="bold-text">Choose your Storage:</p>
             <div class="button-div" id="storage-config">
-                <button class="model-button blue-border">512 GB</button>
-                <button class="model-button">1 TB</button>
-                <button class="model-button">2 TB</button>
-                <button class="model-button">4 TB</button>
+                <button class="ssd-config-button blue-border">512 GB</button>
+                <button class="ssd-config-button">1 TB</button>
+                <button class="ssd-config-button">2 TB</button>
+                <button class="ssd-config-button">4 TB</button>
             </div>
             <h3>Warranty:</h3>
                 <!-- Creating a div called "warranty-container" so that only one button are in each row. -->
                 <div class="warranty-button-container">
                     <!-- The included warranty should already be selected before the user chooses their warranty. -->
-                    <button class="warranty-button" id="included-warranty">60-day Included Warranty <span class="bold-text">Free</span></button>
+                    <button class="warranty-button blue-border" id="included-warranty">60-day Included Warranty <span class="bold-text">Free</span></button>
                     <button class="warranty-button" id="one-year-warranty">One-Year Standard Warranty <span class="bold-text">+$49.99</span></button>
                     <button class="warranty-button" id="two-year-warranty">Two-Year Extended Warranty with Accidental Damage <span class="bold-text">+$124.99</span></button>
                 </div>
-            <p class="price-font-size"><span class="bold-text">Price: </span><span id="price">Up to $124.99</span></p>
+            <p class="price-font-size"><span class="bold-text">Price: </span><span id="price">$649.99</span></p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
     </div>
@@ -59,16 +67,16 @@
         <h2 class="title-section">Specifications:</h2>
         <div class="specs-container">
             <div class="specs-child">
-                <p><span class="bold-text">Processor:</span><br>
+                <p><span class="bold-text">Processor</span><br>
                     <span id="laptop-processor">Base (10 cores, up to 4.2 GHz; 4 performance cores,<br>6 efficiency cores)</span><br><br>
-                    <span class="bold-text">Graphics Card:</span><br>
+                    <span class="bold-text">Graphics Card</span><br>
                     <span id="laptop-graphics-card">Base (8GB Memory, 128-bit, Bandwidth: 256GB/s,<br>Power: 45W)</span><br><br>
-                    <span class="bold-text">Display:</span><br>
+                    <span class="bold-text">Display</span><br>
                     <span id=laptop-display-size">14" IPS 1920x1200</span>, 350 nits, sRGB 100%,<br>
                     <span id="laptop-refresh-rate">120Hz</span> Adaptive Refresh Rate<br><br>
                     <span class="bold-text">Memory:</span><br>
                     <span id="laptop-memory">16 GB: 2 x 8 GB</span> DDR5, 6000 MT/s, Dual-channel<br><br>
-                    <span class="bold-text">Storage:</span><br>
+                    <span class="bold-text">Storage</span><br>
                     <span id="laptop-storage">512 GB</span> NVMe M.2 SSD Gen5; Read: 14,000 MB/s, Write: 13,000 MB/s
                 </p>
             </div>
@@ -82,16 +90,56 @@
             </div>
             <div class="specs-child">
                 <p><span class="bold-text">Ports</span><br>
-                    Right:<br>2 USB 3.2 Gen2 Type-A<br>
-                    1 USB 3.2 Type-C<br>
+                    Right:<br>2x USB 3.2 Gen2 Type-A<br>
+                    1x USB 3.2 Type-C<br>
                     Left:<br>HDMI 2.1<br>
-                    2 Thunderbolt 5 (80 Gbps) with DisplayPort 2.1 and Power Delivery<br>
-                    RJ-45 Ethernet
+                    <!-- This could be used to update specifications between the base and pro model as they have different number of ports -->
+                    <span id="leftside-type-c-ports">1x USB 3.2 Type-C<br></span>
+                    <span id="thunderbolt-quantity">2x</span> Thunderbolt 5 (80 Gbps) with DisplayPort 2.1 and Power Delivery<br><br>
+
                     <span class="bold-text">Dimensions & Weight</span><br>
-                    Height: 0.55 in<br>
-                    Width:
-                    Weight:<span id="laptop-weight">3.2 lbs</span>
+                    <!-- Base 14" Height: 0.5 in / Pro 14" Height: 0.6 in; Base 16" Height: 0.5 in  /Pro 16" Height: 0.65 in -->
+                    Height: <span id="laptop-height">0.5</span> in <br>
+                    <!-- Base 14" Width: 12.8 in / Pro 14" Width: 12.4 in; Base 16" Width: 13.6 in / Pro 16" Width: 14.02 in -->
+                    Width: <span id="laptop-width">12.8</span> in <br>
+                    <!-- Base 14" Depth: 8.9 in / Pro 14" Depth: 8.65 in; Base 16" Depth: 9.45 in / Pro 16" Depth: 9.55 in -->
+                    Depth: <span id="laptop-depth">8.9</span> in <br>
+                    <!-- Base 14" Weight: 3 lbs / Pro 14" Weight: 3.5 lbs; Base 16" Weight: 3.4 lbs / Pro 16" Weight: 4.0 lbs -->
+                    Weight: <span id="laptop-weight">3 lbs</span>
                 </p>
+            </div>
+        </div>
+    </div>
+    <div class="webpage-containers" id="specifications">
+        <h2 class="title-section">Compare Models</h2>
+        <div class="compare-models-container"">
+            <div class="specs-child">
+                <h3 class="compare-models-text">Base</h3>
+                <p><span class="bold-text">Processor</span><br>10 cores, up to 4.2 GHz; 4 performance cores, 6 efficiency cores</p>
+                <p><span class="bold-text">Graphics Card</span><br>8 GB Memory, 128-bit, Bandwidth: 256GB/s, Power: Up to 45W</p>
+                <p><span class="bold-text">Displays</span><br>
+                    14" - IPS 1920 x 1200, FHD+ , 162 PPI, 500 nits, 85% sRGB<br>
+                    16" = IPS 2560 x 1600, WQXGA QHD+ (2.5K), 188 PPI, 500 nits, 85% sRGB<br>
+                    120Hz Adaptive Refresh Rate</p>
+                <p><span class="bold-text">Left Ports</span><br>
+                    1x HDMI 2.1 <br>1x USB 3.2 Type-C <br>1x Thunderbolt 5 (120 Gbps) with DisplayPort 2.1 and Power Delivery</p>
+                <p><span class="bold-text">Right Ports</span><br>2x USB 3.2 Type-A <br>1x USB 3.2 Type-C</p>
+                <p><span class="bold-text">Battery Life: </span>Up to 10 hours (8 hours under heavy load)</p>
+            </div>
+            <div class="specs-child">
+                <h3 class="compare-models-text">Pro</h3>
+                <p><span class="bold-text">Processor</span><br>16 cores, up to 4.8 Ghz; 6 performance cores, 10 efficiency cores</p>
+                <p><span class="bold-text">Graphics Card</span><br>12 GB DDR6, 192-bit, Bandwidth: 384 GB/s, Power: Up to 80W</p>
+                <p><span class="bold-text">Displays</span><br>
+                    14" - IPS 2560 x 1600, WQXGA QHD+ (2.5K), 216 PPI, 1000 nits (peak brightness), DCI-P3 100%, sRGB 100%<br>
+                    16" - IPS 2880 x 1800, WQXGA+ (2.8K), 212 PPI, 1000 nits (peak brightness), DCI-P3 100%, sRGB 100%<br>
+                    144Hz Adaptive Refresh Rate</p>
+                 <p><span class="bold-text">Left Ports</span><br>
+                    1x HDMI 2.1 <br>2x Thunderbolt 5 (120 Gb/s) with DisplayPort 2.1 and Power Delivery <br>RJ-45 Ethernet (10/100/1000)</p>   
+                <p><span class="bold-text">Right Ports</span><br>
+                    2x USB 3.2 Type-A <br>1x Thunderbolt 5 (120Gb/s) with Power Delivery</p>
+                
+                <p><span class="bold-text">Battery Life: </span>Up to 18 hours (10 hours under heavy load)</p>
             </div>
         </div>
     </div>
