@@ -358,7 +358,7 @@ button{
 
 #warranty-section, #FAQ-section{
     text-align:center;
-    padding:2rem;
+    padding:2rem 0;
 }
 /* Gets rid of the spacing between the FAQ section and the footer. */
 #FAQ-section{
@@ -371,12 +371,14 @@ button{
     color:#0000D1;
 }
 .webpage-containers{
-    width:100vw;
+    max-width:100%;
     background-color:white;
     padding:1.25rem 0;
     margin-bottom:0.8rem;
     border-width:0;
 }
+
+
 .price-font-size{
     font-size:1.5rem;
 }
@@ -399,6 +401,9 @@ button{
     border-color:gray;
 }
 
+.model-button:active, .ram-config-button:active, .ssd-config-button:active, .laptop-size-button:active, .warranty-button:active{
+    transform:scale(0.99);
+}
 /* Used for most configuration buttons except for warranty buttons */
 
 /* This creates a spacing between the buttons */
@@ -563,11 +568,17 @@ button{
 #specifications{
     padding:0.5rem 2rem;
 }
-.specs-container{
+.specs-container, .compare-models-container{
     display:flex;
     flex-direction:row;
     justify-content:flex-start;
-    gap:2.75rem;
+    gap:2.5rem;
+}
+.specs-container{
+    gap:2.5rem;
+}
+.compare-models-container{
+    gap:5rem;
 }
 .specs-child{
     width:35%;
@@ -593,6 +604,5 @@ button{
     height:100%;
     margin-left:auto;
     margin-right:auto;
-    line-height:1.5rem;
-    
+    line-height:1.5rem;  
 }
