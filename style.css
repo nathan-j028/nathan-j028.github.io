@@ -525,9 +525,6 @@ button{
     align-items:center;
 }
 .footer-links{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
     text-decoration:none;
     color:white;
     font-size:0.85rem;
@@ -542,15 +539,15 @@ button{
 .essential-links .product-links{
     width:50%;
     height:100%;
-    line-height:4rem;
 }
+/* This makes the essential links arrange in a column */
 .essential-links{
     display:flex;
     flex-direction:column;
     gap:0.5rem;
 }
 
-/* This makes 5 links be in 2 columns each side by side. */
+/* This makes 5 links be in 2 columns each side by side. In other words, this makes two div boxes be in a row. */
 .product-links{
     display:flex;
     flex-direction:row;
@@ -568,11 +565,11 @@ button{
 #specifications{
     padding:0.5rem 2rem;
 }
+/* Makes the flex items arrange in a row  */
 .specs-container, .compare-models-container{
     display:flex;
     flex-direction:row;
     justify-content:flex-start;
-    gap:2.5rem;
 }
 .specs-container{
     gap:2.5rem;
@@ -585,11 +582,6 @@ button{
     line-height:1.5rem;
 }
 
-.compare-models-container{
-    display:flex;
-    flex-direction:row;
-    justify-content:flex-start;
-}
 .compare-models-text{
     text-decoration:underline;
 }
@@ -605,4 +597,8 @@ button{
     margin-left:auto;
     margin-right:auto;
     line-height:1.5rem;  
+}
+/* Used for Warranty Policy and FAQ webpages. */
+#no-bottom-margin{
+    margin-bottom:0;
 }
