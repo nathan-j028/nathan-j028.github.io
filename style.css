@@ -307,10 +307,13 @@ button{
 .layout-image-size{
     width:14vw;
 }
+.product-child{
+    width:100%;
+}
+
 .product-row-one, .product-row-two{
     width:100%;
     display:flex;
-    flex-wrap:wrap;
     justify-content:center;
     align-items:baseline;
     align-content:center;
@@ -330,8 +333,7 @@ button{
 }
 
 /* Changes the distance from the product images */
-#product-title{
-    line-height:0px;
+.product-title{
     margin-bottom:1rem;
 }
 
