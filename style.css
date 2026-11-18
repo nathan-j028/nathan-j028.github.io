@@ -384,11 +384,9 @@ button{
 .price-font-size{
     font-size:1.5rem;
 }
-#price{
-    text-decoration:underline;
-}
+
 /* Plan to make the button border color to be blue after a button is pressed so the user knows what configurations are selected. */
-.model-button, .ram-config-button, .ssd-config-button, .laptop-size-button{
+.product-button{
     width:5.75rem;
     height:2.75rem;
     border-width:2px;
@@ -398,12 +396,12 @@ button{
     font-size:1.25rem;
     background-color:white;
 }
-.model-button:hover,.ram-config-button:hover, .ssd-config-button:hover, .laptop-size-button:hover{
+.product-button:hover{
     border-width:2.75px;
     border-color:gray;
 }
 
-.model-button:active, .ram-config-button:active, .ssd-config-button:active, .laptop-size-button:active, .warranty-button:active{
+.product-button:active, .warranty-button:active{
     transform:scale(0.99);
 }
 /* Used for most configuration buttons except for warranty buttons */
