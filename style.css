@@ -387,15 +387,20 @@ button{
 
 /* Plan to make the button border color to be blue after a button is pressed so the user knows what configurations are selected. */
 .product-button{
-    width:5.75rem;
-    height:2.75rem;
+    width:15rem;
+    height:5rem;
     border-width:2px;
     border-color:black;
     border-radius:0.5rem;
     border-style:solid;
-    font-size:1.25rem;
+    font-size:1rem;
     background-color:white;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
 }
+
 .product-button:hover{
     border-width:2.75px;
     border-color:gray;
@@ -406,11 +411,18 @@ button{
 }
 /* Used for most configuration buttons except for warranty buttons */
 
-/* This creates a spacing between the buttons */
-.button-div{
+/* This arranges the buttons and creates a spacing between the buttons */
+.button-div-column{
+    width:auto;
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+}
+.button-div-row{
     width:auto;
     display:flex;
     flex-direction:row;
+    flex-wrap:wrap;
     gap:0.5rem;
 }
 /* Created a div box container so that the buttons will go in separate rows. */
@@ -418,7 +430,6 @@ button{
     width:auto;
     display:flex;
     flex-direction:column;
-    align-items:flex-start;
 }
 /* Styles the warranty buttons */
 .warranty-button{
