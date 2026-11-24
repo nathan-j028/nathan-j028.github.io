@@ -314,6 +314,7 @@ button{
 .product-row-one, .product-row-two{
     width:100%;
     display:flex;
+    flex-direction:row;
     justify-content:center;
     align-items:baseline;
     align-content:center;
